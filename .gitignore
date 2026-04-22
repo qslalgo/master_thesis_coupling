@@ -1,0 +1,9 @@
+*.h5
+statepoint.*
+*.out
+*.log
+*.vtk
+__pycache__/
+*.pyc
+*.msh
+case_*/
