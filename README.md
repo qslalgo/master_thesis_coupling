@@ -54,10 +54,12 @@ coupling/
 
 1. Prepare OpenMC input and run neutronics simulation
 2. Extract axial power profiles (kappa-fission tallies)
-3. Run thermal-hydraulics solver:
+3. Run thermal-hydraulics solver for different power cases:
 
    ```
-   python run_coupling.py
+   python run_iteration_scheme_all_high_power.py
+   python run_iteration_scheme_all_mid_power.py
+   python run_iteration_scheme_all_low_power.py
    ```
 4. Iterate coupling until convergence criteria are met
 
