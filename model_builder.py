@@ -1214,7 +1214,7 @@ def build_model(config):
 
 
     materials = openmc.Materials([material_gold, material_1, material_2, material_3, material_4, material_7, material_10, material_11, material_14, material_15, material_16, material_23, material_24, material_25, material_26, material_33, material_34, material_35, material_36, material_37, material_43, material_44, material_45, material_46, material_47, material_53, material_54, material_55, material_56, material_57, material_63, material_64, material_65, material_66, material_67])
-   
+    materials.export_to_xml()
 
 
    
@@ -16319,6 +16319,7 @@ def build_model(config):
     universe_0.add_cells([IE3])
 
     geometry = openmc.Geometry(universe_0)
+    geometry.export_to_xml()
 
 
     # ###################################### #
@@ -16411,54 +16412,54 @@ def build_model(config):
     source_86 = openmc.Source(space=openmc.stats.Point(( -9.750, -20.550, 0.0 )))
     source_87 = openmc.Source(space=openmc.stats.Point(( -9.750, -20.550, 20.0 )))
     
-    # source_88 = openmc.Source(space=openmc.stats.Point(( 2.550, -15.450, -21.0 )))
-    # source_89 = openmc.Source(space=openmc.stats.Point(( 2.550, -15.450, 0.5)))
-    # source_90 = openmc.Source(space=openmc.stats.Point(( 2.550, -15.450, 21.0 )))
-    # source_91 = openmc.Source(space=openmc.stats.Point(( 2.550, -17.150, -21.0 )))
-    # source_92 = openmc.Source(space=openmc.stats.Point(( 2.550, -17.150, 0.5 )))
-    # source_93 = openmc.Source(space=openmc.stats.Point(( 2.550, -17.150, 21.0 )))
-    # source_94 = openmc.Source(space=openmc.stats.Point(( 2.550, -18.850, -21.0 )))
-    # source_95 = openmc.Source(space=openmc.stats.Point(( 2.550, -18.850, 0.5 )))
-    # source_96 = openmc.Source(space=openmc.stats.Point(( 2.550, -18.850, 21.0 )))
-    # source_97 = openmc.Source(space=openmc.stats.Point(( 2.550, -20.550, -21.0 )))
-    # source_98 = openmc.Source(space=openmc.stats.Point(( 2.550, -20.550, 0.5 )))
-    # source_99 = openmc.Source(space=openmc.stats.Point(( 2.550, -20.550, 21.0 )))
-    # source_100 = openmc.Source(space=openmc.stats.Point(( 0.850, -15.450, -21.0 )))
-    # source_101 = openmc.Source(space=openmc.stats.Point(( 0.850, -15.450, 0.5 )))
-    # source_102 = openmc.Source(space=openmc.stats.Point(( 0.850, -15.450, 21.0 )))
-    # source_103 = openmc.Source(space=openmc.stats.Point(( 0.850, -17.150, -21.0 )))
-    # source_104 = openmc.Source(space=openmc.stats.Point(( 0.850, -17.150, 0.5 )))
-    # source_105 = openmc.Source(space=openmc.stats.Point(( 0.850, -17.150, 21.0 )))
-    # source_106 = openmc.Source(space=openmc.stats.Point(( 0.850, -18.850, -21.0 )))
-    # source_107 = openmc.Source(space=openmc.stats.Point(( 0.850, -18.850, 0.5 )))
-    # source_108 = openmc.Source(space=openmc.stats.Point(( 0.850, -18.850, 21.0 )))
-    # source_109 = openmc.Source(space=openmc.stats.Point(( 0.850, -20.550, -21.0 )))
-    # source_110 = openmc.Source(space=openmc.stats.Point(( 0.850, -20.550, 0.5 )))
-    # source_111 = openmc.Source(space=openmc.stats.Point(( 0.850, -20.550, 21.0 )))
-    # source_112 = openmc.Source(space=openmc.stats.Point(( -0.850, -15.450, -21.0 )))
-    # source_113 = openmc.Source(space=openmc.stats.Point(( -0.850, -15.450, 0.5 )))
-    # source_114 = openmc.Source(space=openmc.stats.Point(( -0.850, -15.450, 21.0 )))
-    # source_115 = openmc.Source(space=openmc.stats.Point(( -0.850, -17.150, -21.0 )))
-    # source_116 = openmc.Source(space=openmc.stats.Point(( -0.850, -17.150, 0.5 )))
-    # source_117 = openmc.Source(space=openmc.stats.Point(( -0.850, -17.150, 21.0 )))
-    # source_118 = openmc.Source(space=openmc.stats.Point(( -0.850, -18.850, -21.0 )))
-    # source_119 = openmc.Source(space=openmc.stats.Point(( -0.850, -18.850, 0.5 )))
-    # source_120 = openmc.Source(space=openmc.stats.Point(( -0.850, -18.850, 21.0 )))
-    # source_121 = openmc.Source(space=openmc.stats.Point(( -0.850, -20.550, -21.0 )))
-    # source_122 = openmc.Source(space=openmc.stats.Point(( -0.850, -20.550, 0.5 )))
-    # source_123 = openmc.Source(space=openmc.stats.Point(( -0.850, -20.550, 21.0 )))
-    # source_124 = openmc.Source(space=openmc.stats.Point(( -2.550, -15.450, -21.0 )))
-    # source_125 = openmc.Source(space=openmc.stats.Point(( -2.550, -15.450, 0.5 )))
-    # source_126 = openmc.Source(space=openmc.stats.Point(( -2.550, -15.450, 21.0 )))
-    # source_127 = openmc.Source(space=openmc.stats.Point(( -2.550, -17.150, -21.0 )))
-    # source_128 = openmc.Source(space=openmc.stats.Point(( -2.550, -17.150, 0.5 )))
-    # source_129 = openmc.Source(space=openmc.stats.Point(( -2.550, -17.150, 21.5 )))
-    # source_130 = openmc.Source(space=openmc.stats.Point(( -2.550, -18.850, -21.0 )))
-    # source_131 = openmc.Source(space=openmc.stats.Point(( -2.550, -18.850, 0.5 )))
-    # source_132 = openmc.Source(space=openmc.stats.Point(( -2.550, -18.850, 21.0 )))
-    # source_133 = openmc.Source(space=openmc.stats.Point(( -2.550, -20.550, -21.0 )))
-    # source_134 = openmc.Source(space=openmc.stats.Point(( -2.550, -20.550, 0.5 )))
-    # source_135 = openmc.Source(space=openmc.stats.Point(( -2.550, -20.550, 21.0 )))
+    source_88 = openmc.Source(space=openmc.stats.Point(( 2.550, -15.450, -21.0 )))
+    source_89 = openmc.Source(space=openmc.stats.Point(( 2.550, -15.450, 0.5)))
+    source_90 = openmc.Source(space=openmc.stats.Point(( 2.550, -15.450, 21.0 )))
+    source_91 = openmc.Source(space=openmc.stats.Point(( 2.550, -17.150, -21.0 )))
+    source_92 = openmc.Source(space=openmc.stats.Point(( 2.550, -17.150, 0.5 )))
+    source_93 = openmc.Source(space=openmc.stats.Point(( 2.550, -17.150, 21.0 )))
+    source_94 = openmc.Source(space=openmc.stats.Point(( 2.550, -18.850, -21.0 )))
+    source_95 = openmc.Source(space=openmc.stats.Point(( 2.550, -18.850, 0.5 )))
+    source_96 = openmc.Source(space=openmc.stats.Point(( 2.550, -18.850, 21.0 )))
+    source_97 = openmc.Source(space=openmc.stats.Point(( 2.550, -20.550, -21.0 )))
+    source_98 = openmc.Source(space=openmc.stats.Point(( 2.550, -20.550, 0.5 )))
+    source_99 = openmc.Source(space=openmc.stats.Point(( 2.550, -20.550, 21.0 )))
+    source_100 = openmc.Source(space=openmc.stats.Point(( 0.850, -15.450, -21.0 )))
+    source_101 = openmc.Source(space=openmc.stats.Point(( 0.850, -15.450, 0.5 )))
+    source_102 = openmc.Source(space=openmc.stats.Point(( 0.850, -15.450, 21.0 )))
+    source_103 = openmc.Source(space=openmc.stats.Point(( 0.850, -17.150, -21.0 )))
+    source_104 = openmc.Source(space=openmc.stats.Point(( 0.850, -17.150, 0.5 )))
+    source_105 = openmc.Source(space=openmc.stats.Point(( 0.850, -17.150, 21.0 )))
+    source_106 = openmc.Source(space=openmc.stats.Point(( 0.850, -18.850, -21.0 )))
+    source_107 = openmc.Source(space=openmc.stats.Point(( 0.850, -18.850, 0.5 )))
+    source_108 = openmc.Source(space=openmc.stats.Point(( 0.850, -18.850, 21.0 )))
+    source_109 = openmc.Source(space=openmc.stats.Point(( 0.850, -20.550, -21.0 )))
+    source_110 = openmc.Source(space=openmc.stats.Point(( 0.850, -20.550, 0.5 )))
+    source_111 = openmc.Source(space=openmc.stats.Point(( 0.850, -20.550, 21.0 )))
+    source_112 = openmc.Source(space=openmc.stats.Point(( -0.850, -15.450, -21.0 )))
+    source_113 = openmc.Source(space=openmc.stats.Point(( -0.850, -15.450, 0.5 )))
+    source_114 = openmc.Source(space=openmc.stats.Point(( -0.850, -15.450, 21.0 )))
+    source_115 = openmc.Source(space=openmc.stats.Point(( -0.850, -17.150, -21.0 )))
+    source_116 = openmc.Source(space=openmc.stats.Point(( -0.850, -17.150, 0.5 )))
+    source_117 = openmc.Source(space=openmc.stats.Point(( -0.850, -17.150, 21.0 )))
+    source_118 = openmc.Source(space=openmc.stats.Point(( -0.850, -18.850, -21.0 )))
+    source_119 = openmc.Source(space=openmc.stats.Point(( -0.850, -18.850, 0.5 )))
+    source_120 = openmc.Source(space=openmc.stats.Point(( -0.850, -18.850, 21.0 )))
+    source_121 = openmc.Source(space=openmc.stats.Point(( -0.850, -20.550, -21.0 )))
+    source_122 = openmc.Source(space=openmc.stats.Point(( -0.850, -20.550, 0.5 )))
+    source_123 = openmc.Source(space=openmc.stats.Point(( -0.850, -20.550, 21.0 )))
+    source_124 = openmc.Source(space=openmc.stats.Point(( -2.550, -15.450, -21.0 )))
+    source_125 = openmc.Source(space=openmc.stats.Point(( -2.550, -15.450, 0.5 )))
+    source_126 = openmc.Source(space=openmc.stats.Point(( -2.550, -15.450, 21.0 )))
+    source_127 = openmc.Source(space=openmc.stats.Point(( -2.550, -17.150, -21.0 )))
+    source_128 = openmc.Source(space=openmc.stats.Point(( -2.550, -17.150, 0.5 )))
+    source_129 = openmc.Source(space=openmc.stats.Point(( -2.550, -17.150, 21.5 )))
+    source_130 = openmc.Source(space=openmc.stats.Point(( -2.550, -18.850, -21.0 )))
+    source_131 = openmc.Source(space=openmc.stats.Point(( -2.550, -18.850, 0.5 )))
+    source_132 = openmc.Source(space=openmc.stats.Point(( -2.550, -18.850, 21.0 )))
+    source_133 = openmc.Source(space=openmc.stats.Point(( -2.550, -20.550, -21.0 )))
+    source_134 = openmc.Source(space=openmc.stats.Point(( -2.550, -20.550, 0.5 )))
+    source_135 = openmc.Source(space=openmc.stats.Point(( -2.550, -20.550, 21.0 )))
     
     source_136 = openmc.Source(space=openmc.stats.Point(( 9.750, -15.450, -20.0 )))
     source_137 = openmc.Source(space=openmc.stats.Point(( 9.750, -15.450, 0.0 )))
@@ -17525,54 +17526,54 @@ def build_model(config):
         source_85, \
         source_86, \
         source_87, \
-        # source_88, \
-        # source_89, \
-        # source_90, \
-        # source_91, \
-        # source_92, \
-        # source_93, \
-        # source_94, \
-        # source_95, \
-        # source_96, \
-        # source_97, \
-        # source_98, \
-        # source_99, \
-        # source_100, \
-        # source_101, \
-        # source_102, \
-        # source_103, \
-        # source_104, \
-        # source_105, \
-        # source_106, \
-        # source_107, \
-        # source_108, \
-        # source_109, \
-        # source_110, \
-        # source_111, \
-        # source_112, \
-        # source_113, \
-        # source_114, \
-        # source_115, \
-        # source_116, \
-        # source_117, \
-        # source_118, \
-        # source_119, \
-        # source_120, \
-        # source_121, \
-        # source_122, \
-        # source_123, \
-        # source_124, \
-        # source_125, \
-        # source_126, \
-        # source_127, \
-        # source_128, \
-        # source_129, \
-        # source_130, \
-        # source_131, \
-        # source_132, \
-        # source_133, \
-        # source_134, \
-        # source_135, \
+        source_88, \
+        source_89, \
+        source_90, \
+        source_91, \
+        source_92, \
+        source_93, \
+        source_94, \
+        source_95, \
+        source_96, \
+        source_97, \
+        source_98, \
+        source_99, \
+        source_100, \
+        source_101, \
+        source_102, \
+        source_103, \
+        source_104, \
+        source_105, \
+        source_106, \
+        source_107, \
+        source_108, \
+        source_109, \
+        source_110, \
+        source_111, \
+        source_112, \
+        source_113, \
+        source_114, \
+        source_115, \
+        source_116, \
+        source_117, \
+        source_118, \
+        source_119, \
+        source_120, \
+        source_121, \
+        source_122, \
+        source_123, \
+        source_124, \
+        source_125, \
+        source_126, \
+        source_127, \
+        source_128, \
+        source_129, \
+        source_130, \
+        source_131, \
+        source_132, \
+        source_133, \
+        source_134, \
+        source_135, \
         source_136, \
         source_137, \
         source_138, \
@@ -18889,6 +18890,7 @@ def build_model(config):
         "method": "interpolation",
         "range": (250.0, 1200.0)  # K; choose wide enough for your case
     }
+    settings.export_to_xml()
    
 
     
@@ -19171,7 +19173,7 @@ def build_model(config):
     for assy_id, cells in fuel_cells_by_assembly.items()
     }
 
-    #tallies.export_to_xml()
+    tallies.export_to_xml()
     # ###################################### #
 
     PlotColors = {
