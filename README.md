@@ -61,6 +61,11 @@ coupling/
    python run_iteration_scheme_all_mid_power.py
    python run_iteration_scheme_all_low_power.py
    ```
+   or
+   ```
+   python run_coupling.py FB3 --max-iter 1 --alpha 1.0
+   ```
+   
 4. Iterate coupling until convergence criteria are met
 
 ---
